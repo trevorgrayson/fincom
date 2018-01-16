@@ -6,3 +6,10 @@ Financial Wealth Management Command-line utils
 
 * portfolio.csv
 * crypto.csv
+
+
+Get total coming in, and total expenses going out, by month.
+
+```
+  burnrate.py
+```
