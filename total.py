@@ -23,9 +23,6 @@ if __name__ == "__main__":
     stocks = iextrading.get_stock_values(portfolio.keys())
     # yahoo.write(yahoo_body, today)
 
-    for stock in stocks:
-        print "%s: %s = %s" % (stock.symbol, stock.value, portfolio[stock.symbol])
-
     stocks = sum(
         [float(portfolio[stock.symbol]) * stock.value
          for stock in stocks]
