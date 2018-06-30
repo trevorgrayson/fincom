@@ -1,10 +1,11 @@
+#!/usr/bin/env python
+
 import StringIO
 import csv
-import requests
-from glob import glob
 from datetime import date, timedelta
 import os.path
 from util import portfolio, crypto_tokens, cash_accounts
+from format import price_scrub
 
 from services import crypto
 from services import yahoo
@@ -27,6 +28,7 @@ if __name__ == "__main__":
         [float(portfolio[stock.symbol]) * stock.value
          for stock in stocks]
     )
+
 
     tokens = crypto_tokens()
 
