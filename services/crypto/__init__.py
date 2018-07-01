@@ -11,3 +11,9 @@ def get_price(symbol):
         data = json.loads(response.text)
 
         return float(data['bpi']['USD']['rate_float'])
+
+def price_portfolio(portfolio):
+    for pos in portfolio.positions.values():
+        pos.price = get_price(pos.symbol)
+
+    return portfolio

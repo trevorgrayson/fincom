@@ -20,11 +20,13 @@ def crypto_tokens():
     try:
         with open('crypto.csv', 'rb') as csvfile:
             reader = csv.reader(csvfile, delimiter=',')
-            tokens = dict([(row[0], row[1]) for row in reader])
+            positions = [Position(symbol=row[0], quantity=row[1]) 
+                for row in reader]
 
-            return tokens
+            return Portfolio(positions)
+
     except IOError:
-        return {}
+        return Portfolio()
 
 def cash_accounts():
     """ Crypto currency tokens """

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python -s
 
 import StringIO
 import csv
@@ -21,15 +21,15 @@ today = today.strftime("%Y-%m-%d")
 
 if __name__ == "__main__":
     portfolio = portfolio()
-    stocks = iextrading.get_stock_values(portfolio)
+    portfolio = iextrading.get_stock_values(portfolio)
     # yahoo.write(yahoo_body, today)
 
-    stocks = stocks.value
+    stocks = portfolio.value
 
     tokens = crypto_tokens()
+    tokens = crypto.price_portfolio(tokens)
 
-    crypto = sum([crypto.get_price(sym) * float(tokens[sym]) 
-                  for sym in tokens.keys()])
+    crypto = tokens.value
 
     cash = sum([float(val) for k, val in cash_accounts().iteritems()])
 
