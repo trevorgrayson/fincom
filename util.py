@@ -1,4 +1,5 @@
 import csv
+from models import Portfolio, Position
 
 def portfolio():
     """ Stock market portfolio """
@@ -6,13 +7,13 @@ def portfolio():
     try:
         with open('portfolio.csv', 'rb') as csvfile:
             reader = csv.reader(csvfile, delimiter=',')
-            tickers = dict([(row[0].replace(' ', '-'), row[2]) 
-                for row in reader]
-            )
+            positions = [Position(symbol=row[0], quantity=row[2]) 
+                for row in reader ]
 
-            return tickers
+            return Portfolio(positions)
+
     except IOError:
-        return {}
+        return Portfolio()
 
 def crypto_tokens():
     """ Crypto currency tokens """

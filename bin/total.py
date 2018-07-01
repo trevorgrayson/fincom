@@ -21,14 +21,10 @@ today = today.strftime("%Y-%m-%d")
 
 if __name__ == "__main__":
     portfolio = portfolio()
-    stocks = iextrading.get_stock_values(portfolio.keys())
+    stocks = iextrading.get_stock_values(portfolio)
     # yahoo.write(yahoo_body, today)
 
-    stocks = sum(
-        [float(portfolio[stock.symbol]) * stock.value
-         for stock in stocks]
-    )
-
+    stocks = stocks.value
 
     tokens = crypto_tokens()
 
