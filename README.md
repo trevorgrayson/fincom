@@ -13,6 +13,16 @@ and minimum dependency
 ** Format: "Ticker, Quantity"
 
 
+## Build portfolio.csv
+You're going to need to get a list of your assets, so 
+use the included scripts, or you can manually make one 
+in the format:
+
+```
+Symbol, Readable Name, Quantity
+```
+
+
 Total Value:
 
 ```
