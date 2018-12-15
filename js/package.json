@@ -1,0 +1,25 @@
+{
+  "name": "openfire",
+  "version": "1.0.0",
+  "description": "Financial Indenpendence Lib",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "decimal": "0.0.2",
+    "decimal.js": "^10.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "finance",
+    "retirement"
+  ],
+  "author": "trevor grayson",
+  "license": "MIT"
+}
