@@ -5,6 +5,21 @@ Shooting to be compatible with both python 2.7 and 3 for maximum usability
 and minimum dependency
 
 
+## etl
+
+Fetch assets using the etl methods. USAA is supported.
+This will populate the `/data/YYYY-MM-DD` dir with bank asset files.
+
+```
+./bin/etl
+```
+
+The raw bank asset files can be normalized into portfolio-YYYY-MM-DD.csv
+
+```
+```
+
+
 ## Add CSVs of assets
 
 * portfolio.csv

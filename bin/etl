@@ -1,0 +1,5 @@
+ruby watir/usaa.rb
+DATA_DIR="data/`date +%Y-%m-%d`/"
+rm -rf $DATA_DIR # idempotent
+mkdir -p $DATA_DIR
+mv ~/Downloads/im_position* $DATA_DIR
