@@ -7,6 +7,10 @@ module.exports = {
     return Math.round(
       principal * Math.pow(base, exponent) 
     ) 
+  },
+
+  todaysDollars: function(amount, years, inflateRate=0.029) {
+    return 0;
   }
 
 }

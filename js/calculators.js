@@ -3,12 +3,12 @@ var compound = require('./compound');
 
 module.exports = {
 
-  whenWillIHave: function (amount, principal, rate) {
+  whenWillIHave: function(amount, principal, rate) {
     // less inflation? In todays dollars or not?
     var log = Math.log;
 
     var num = log(amount/principal);
-    var denom = log(1+rate)
+    var denom = log(1+rate);
 
     return Math.round(num / denom);
   },

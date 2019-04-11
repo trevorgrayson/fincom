@@ -1,0 +1,172 @@
+23:27:47.360 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:41:23.195 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:41:23.491 [main] ERROR com.intuit.karate.core.FeatureParser - syntax error: mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:41:23.492 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: /Users/trevor.grayson/projects/fincom/karate/bank.feature - mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:41:40.767 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:41:41.000 [main] ERROR com.intuit.karate.core.FeatureParser - syntax error: mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:41:41.001 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: /Users/trevor.grayson/projects/fincom/karate/bank.feature - mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:42:17.353 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:42:17.610 [main] ERROR com.intuit.karate.core.FeatureParser - syntax error: mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:42:17.612 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: /Users/trevor.grayson/projects/fincom/karate/bank.feature - mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:45:21.947 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:45:22.222 [main] ERROR com.intuit.karate.core.FeatureParser - syntax error: mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:45:22.223 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: /Users/trevor.grayson/projects/fincom/karate/bank.feature - mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:45:50.620 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:45:50.859 [main] ERROR com.intuit.karate.core.FeatureParser - syntax error: mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:45:50.860 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: /Users/trevor.grayson/projects/fincom/karate/bank.feature - mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:46:16.356 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:46:16.600 [main] ERROR com.intuit.karate.core.FeatureParser - syntax error: mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:46:16.601 [main] ERROR com.intuit.karate.core.FeatureParser - not a valid feature file: /Users/trevor.grayson/projects/fincom/karate/bank.feature - mismatched input '<EOF>' expecting {FEATURE_TAGS, FEATURE}
+23:46:44.262 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:46:44.970 [main] INFO  com.intuit.karate - backend initialized
+23:47:24.186 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:47:24.809 [main] INFO  com.intuit.karate - backend initialized
+23:47:56.949 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:47:57.571 [main] INFO  com.intuit.karate - backend initialized
+23:52:42.813 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+23:52:43.421 [main] INFO  com.intuit.karate - backend initialized
+23:52:43.509 [main] INFO  c.intuit.karate.netty.FeatureServer - server started - http://127.0.0.1:80
+00:21:32.788 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+00:21:33.579 [main] INFO  com.intuit.karate - backend initialized
+00:21:43.121 [main] INFO  com.intuit.karate.netty.Main - Karate version: 0.9.1
+00:23:00.950 [JavaFX Application Thread] WARN  com.intuit.karate - skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+00:23:07.341 [JavaFX Application Thread] DEBUG com.intuit.karate - request:
+1 > GET http://trevorgrayson.com/
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: trevorgrayson.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_201)
+
+00:23:07.661 [JavaFX Application Thread] DEBUG com.intuit.karate - response time in milliseconds: 317.11
+1 < 200
+1 < Accept-Ranges: bytes
+1 < Connection: Keep-Alive
+1 < Content-Type: text/html; charset=UTF-8
+1 < Date: Thu, 07 Mar 2019 08:23:08 GMT
+1 < ETag: "811a-e5f-52ace015c2980"
+1 < Keep-Alive: timeout=15, max=100
+1 < Last-Modified: Tue, 02 Feb 2016 18:52:38 GMT
+1 < Server: Apache/2.2.14 (Ubuntu)
+1 < Vary: Accept-Encoding
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:thg="http://trevorgrayson.com" xmlns:vc="http://xmpp.org/extensions/xep-0054.html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Trevor Grayson</title>
+<link href="http://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="css/reset.css">
+<link type="text/css" rel="stylesheet" href="css/trevorgrayson.css">
+<script type="text/javascript" src="javascripts/jquery.min.js"></script><script type="text/javascript">
+    //var join_chat_message = "Talk back. Enter Message here."
+
+    //rand = Math.floor(Math.random() * 100000000000).toString(); 
+    ////xmppclient_nick= prompt("Hello! What's your name?",'anon' + rand);
+    ////xmppclient_jid='anon' + rand + '@trevorgrayson.com/' + xmppclient_nick;
+    ////xmppclient_password='password';
+    //xmppclient_chatroom='tgrayson@trevorgrayson.com';
+
+    //$(document).ready(function(){
+    //  $('#msgArea').val(join_chat_message);
+
+    //  $('#send_chat_form').submit(function() {
+    //    var message = $(this).find('.message').val();
+
+    //    if (message != '') { //don't send blank mesages!
+    //      $(this).find('.message').val('');
+    //    }
+    //    return false;
+    //  });
+
+    //  $('#navigation_form').submit(function(e) {
+    //    var message = $('#navigation_url').val();
+    //    XmppClient.sendMsg(message);
+
+    //    return false;
+    //  });
+
+    //});
+    //function insert_twitter(){
+    //  /*
+    //  new TWTR.Widget({
+    //    version: 2,
+    //    type: 'profile',
+    //    rpp: 1,
+    //    interval: 6000,
+    //    width: 197,
+    //    height: 300,
+    //    theme: {
+    //      shell: {
+    //        background: 'transparent',
+    //        color: '#000000'
+    //      },
+    //      tweets: {
+    //        background: 'transparent',
+    //        color: '#000000',
+    //        links: '#ab8526'
+    //      }
+    //    },
+    //    features: {
+    //      scrollbar: false,
+    //      loop: false,
+    //      live: false,
+    //      hashtags: true,
+    //      timestamp: true,
+    //      avatars: false,
+    //      behavior: 'all'
+    //    }
+    //  }).render().setUser('TrevorGrayson').start();
+    //  */
+    //}
+  </script>
+</head>
+<body>
+<h1>Trevor Grayson</h1>
+<ul class="menu">
+<li>
+<a href="#projects">projects</a><ul>
+<li>
+<a href="http://amendment.io">Amendment.io</a><p>Document tracking in your inbox.</p>
+</li>
+<li>
+<a href="http://fraktal.me">Fraktal</a><p>Socially drawing infinity.</p>
+</li>
+<li>
+<a href="http://firr.st">Firr.st</a><p>Sharing content with competition.</p>
+</li>
+<li>
+<a href="http://remembory.com">Remembory</a><p>Memory improved by membory.</p>
+</li>
+</ul>
+</li>
+<li>
+<a href="#resume">resume</a><ul>
+<li>
+<a href="/resumes/TrevorGraysonResume.doc">doc</a><p></p>
+</li>
+<li>
+<a href="/resumes/TrevorGraysonResume.pdf">pdf</a><p></p>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Contact">contact</a><ul>
+<li>Meatpacking District, New York, NY.</li>
+<li>trevorgrayson@<a href="http://facebook.com/trevorgrayson"><strong>facebook</strong></a>
+</li>
+<li>trevorgrayson@<a href="http://www.linkedin.com/in/trevorgrayson"><strong>linkedin</strong></a>
+</li>
+<li>trevorgrayson@<a href="http://github.com/trevorgrayson"><strong>github</strong></a>
+</li>
+<li>trevorgrayson@<a href="http://stackoverflow.com/users/965161/trevorgrayson"><strong>stackoverflow</strong></a>
+</li>
+<li>trevorgrayson@<a href="mailto:trevor@trevorgrayson.com"><strong>trevorgrayson.com</strong></a>
+</li>
+</ul>
+</li>
+</ul>
+<script>insert_twitter();</script>
+</body>
+</html>
+
+
+00:23:07.684 [JavaFX Application Thread] WARN  com.intuit.karate - xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 71; columnNumber: 3; The element type "link" must be terminated by the matching end-tag "</link>".
