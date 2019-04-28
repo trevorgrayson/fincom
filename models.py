@@ -10,6 +10,9 @@ class Asset(object):
     def __add__(self, b):
         return b + self.price
 
+    def to_csv(self):
+        return ",".join([self.symbol, str(self.quantity)])
+
     def __repr__(self):
         return "<Asset symbol={symbol} price={price}>".format(
             symbol=self.symbol,

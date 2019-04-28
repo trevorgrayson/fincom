@@ -3,7 +3,6 @@ from models import Portfolio, Position
 
 def portfolio():
     """ Stock market portfolio """
-
     try:
         with open('portfolio.csv', 'rb') as csvfile:
             reader = csv.reader(csvfile, delimiter=',')

@@ -12,8 +12,8 @@ from services import yahoo
 from services import iextrading
 import view
 
-FINANCE_URL = "http://finance.yahoo.com/d/quotes.csv?f=snbaopl1&s="
-PATH = 'data/%s.val'
+# FINANCE_URL = "http://finance.yahoo.com/d/quotes.csv?f=snbaopl1&s="
+# PATH = 'data/%s.val'
 
 today = date.today()
 today = today.strftime("%Y-%m-%d")
@@ -21,8 +21,7 @@ today = today.strftime("%Y-%m-%d")
 
 if __name__ == "__main__":
     portfolio = portfolio()
-    portfolio = iextrading.get_stock_values(portfolio)
-    # yahoo.write(yahoo_body, today)
+    stocks = iextrading.get_stock_values(portfolio.keys())
 
     stocks = portfolio.value
 
