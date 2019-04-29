@@ -43,3 +43,4 @@ if __name__ == "__main__":
     with open('data/total.hist', 'ab') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
         writer.writerow([today, "%7.2f"%nut])
+

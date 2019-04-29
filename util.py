@@ -1,5 +1,6 @@
 import csv
 from models import Portfolio, Position
+# from google import sheets
 
 def portfolio():
     """ Stock market portfolio """
@@ -9,10 +10,19 @@ def portfolio():
             positions = [Position(symbol=row[0], quantity=row[2]) 
                 for row in reader ]
 
-            return Portfolio(positions)
+    # except (IOError,IndexError):
+    #     try:
+    #         values = sheets.get_portfolio()
+    #         positions = [Position(symbol=row[0], quantity=row[1]) 
+    #             for row in values ]
 
-    except (IOError,IndexError):
-        return Portfolio([])
+    #     except Exception:
+    #         positions = []
+
+    except Exception:
+        positions = []
+
+    return Portfolio(positions)
 
 def crypto_tokens():
     """ Crypto currency tokens """
@@ -45,3 +55,4 @@ def checking_records():
         transactions = dict([(row[0], row[1]) for row in reader])
 
         return transactions
+

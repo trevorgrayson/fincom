@@ -12,6 +12,9 @@ nut:
 etl:
 	./bin/etl
 
+sheets:
+	python google/sheets.py
+
 clean:
 	find . -name "*.pyc" -delete
 

@@ -39,3 +39,4 @@ class Position(object):
         self.symbol = kwargs.get('symbol')
         self.price = kwargs.get('price')
         self.quantity = kwargs.get('quantity')
+
