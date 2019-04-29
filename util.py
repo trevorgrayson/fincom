@@ -11,8 +11,8 @@ def portfolio():
 
             return Portfolio(positions)
 
-    except IOError:
-        return Portfolio()
+    except (IOError,IndexError):
+        return Portfolio([])
 
 def crypto_tokens():
     """ Crypto currency tokens """
@@ -25,7 +25,7 @@ def crypto_tokens():
             return Portfolio(positions)
 
     except IOError:
-        return Portfolio()
+        return Portfolio([])
 
 def cash_accounts():
     """ Crypto currency tokens """

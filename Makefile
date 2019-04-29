@@ -1,6 +1,9 @@
 test:
 	py.test
 
+build:
+	pip install -r requirements.txt
+
 nut:
 	make etl
 	python normalize_download.py
@@ -8,3 +11,7 @@ nut:
 
 etl:
 	./bin/etl
+
+clean:
+	find . -name "*.pyc" -delete
+
