@@ -1,4 +1,4 @@
-from services import iextrading as iex # import get_stock_values, query_s
+from services.iextrading import get_stock_values, query_s
 
 
 class TestiExtrading(object):
@@ -12,10 +12,10 @@ class TestiExtrading(object):
             'last': 5
         }
 
-        assert iex.query_s(query) == "symbols=aapl,amzn&range=1m&last=5&types=quote,news,chart" 
+        assert query_s(query) == "symbols=aapl,amzn&range=1m&last=5&types=quote,news,chart" 
 
     def test(self):
-        results = iex.get_stock_values(['aapl', 'amzn', 'gpc'])
+        results = get_stock_values(['aapl', 'amzn', 'gpc'])
 
         assert results[0].symbol == 'AAPL'
         # assert isinstance(results[0].value, double)

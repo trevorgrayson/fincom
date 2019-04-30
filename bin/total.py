@@ -4,9 +4,7 @@ import StringIO
 import csv
 from datetime import date, timedelta
 import os.path
-from util import crypto_tokens, cash_accounts
-# from util import portfolio
-from services.google import sheets
+from util import portfolio, crypto_tokens, cash_accounts
 from format import price_scrub
 
 from services import crypto
@@ -14,17 +12,17 @@ from services import yahoo
 from services import iextrading
 import view
 
-# FINANCE_URL = "http://finance.yahoo.com/d/quotes.csv?f=snbaopl1&s="
-# PATH = 'data/%s.val'
+FINANCE_URL = "http://finance.yahoo.com/d/quotes.csv?f=snbaopl1&s="
+PATH = 'data/%s.val'
 
 today = date.today()
 today = today.strftime("%Y-%m-%d")
 
 
 if __name__ == "__main__":
-    portfolio = sheets.portfolio()
-
-    stocks = iextrading.get_stock_values(portfolio)
+    portfolio = portfolio()
+    portfolio = iextrading.get_stock_values(portfolio)
+    # yahoo.write(yahoo_body, today)
 
     stocks = portfolio.value
 
@@ -45,4 +43,3 @@ if __name__ == "__main__":
     with open('data/total.hist', 'ab') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
         writer.writerow([today, "%7.2f"%nut])
-

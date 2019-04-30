@@ -1,2 +1,5 @@
 *.pyc
 *.sw*
+node_modules
+portfolio.*
+data

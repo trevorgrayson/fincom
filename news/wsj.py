@@ -6,10 +6,9 @@ import requests
 
 WORLD_NEWS = 'http://www.wsj.com/xml/rss/3_7085.xml'
 TECH = 'http://www.wsj.com/xml/rss/3_7455.xml'
-MAIN_NEWS = 'https://feeds.a.dj.com/rss/RSSMarketsMain.xml'
 
 
-response = requests.get(MAIN_NEWS)
+response = requests.get(WORLD_NEWS)
 
 if response.status_code == 200:
     root = etree.parse(BytesIO(response.content))

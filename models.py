@@ -1,42 +1,38 @@
-class Asset(object):
-
-    def __init__(self, **kwargs):
-        self.title = kwargs.get('title')
-        self.symbol = kwargs.get('symbol')
-        self.price  = kwargs.get('price')
-        self.quantity = kwargs.get('quantity')
-        
-    
-    def __add__(self, b):
-        return b + self.price
-
-    def to_csv(self):
-        return ",".join([self.symbol, str(self.quantity)])
-
-    def __repr__(self):
-        return "<Asset symbol={symbol} price={price}>".format(
-            symbol=self.symbol,
-            price=self.price
-        )
-
-
 class Portfolio(object):
-    def __init__(self, positions):
-        self.positions = positions
 
-    def keys(self):
-        return [pos.symbol for pos in self.positions]
+    def __init__(self, positions=None):
+        if not positions:
+            positions = {}
+
+        self.positions = dict([(pos.symbol, pos)
+            for pos in positions])
+
+    def __getitem__(self, symbol):
+        results = filter(lambda sym: sym == symbol, self.tickers)
+
+        if results:
+            return self.positions[results[0]]
 
     @property
     def tickers(self):
-        return self.keys()
+        return self.positions.keys()
 
-    def __getitem__(self, key):
-        return filter(lambda p: p.symbol, self.positions)[0]
+    @property
+    def value(self):
+        return sum(map(lambda pos: pos.quantity * pos.price,
+            self.positions.values()
+        ))
+
 
 class Position(object):
+    
     def __init__(self, **kwargs):
+        self.quantity = kwargs.get('quantity', 0.0)
+        self.price  = kwargs.get('price', 0.0)
         self.symbol = kwargs.get('symbol')
-        self.price = kwargs.get('price')
-        self.quantity = kwargs.get('quantity')
+        
+        if isinstance(self.symbol, str):
+            self.symbol = self.symbol.replace(' ', '-')
 
+        if isinstance(self.quantity, str):
+            self.quantity = float(self.quantity.replace(',', ''))

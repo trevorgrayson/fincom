@@ -1,6 +1,8 @@
 from __future__ import print_function
 import pickle
 import os.path
+from models import Portfolio, Position
+
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -13,7 +15,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 SAMPLE_SPREADSHEET_ID = '1EzJTJ7lz3vLlBYPryV76asXmErtqzTkBFoJtlm_F_pU'
 SAMPLE_RANGE_NAME = 'A2:E'
 
-def get_portfolio():
+def portfolio():
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -41,7 +43,9 @@ def get_portfolio():
                                 range=SAMPLE_RANGE_NAME).execute()
     values = result.get('values', [])
 
-    return values
+    positions = [Position(symbol=row[0], quantity=float(row[2])) for row in values]
+
+    return Portfolio(positions)
 
 if __name__ == '__main__':
     values = get_portfolio()
