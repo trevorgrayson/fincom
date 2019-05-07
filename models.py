@@ -29,7 +29,7 @@ class Position(object):
     def __init__(self, **kwargs):
         self.quantity = kwargs.get('quantity', 0.0)
         self.price  = kwargs.get('price', 0.0)
-        self.symbol = kwargs.get('symbol')
+        self.symbol = kwargs.get('symbol').upper()
         
         if isinstance(self.symbol, str):
             self.symbol = self.symbol.replace(' ', '-')

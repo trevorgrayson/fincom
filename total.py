@@ -5,8 +5,8 @@ import csv
 from datetime import date, timedelta
 import os.path
 from util import crypto_tokens, cash_accounts
-# from util import portfolio
-from services.google import sheets
+# import util as portfolio
+from services.google import sheets as portfolio
 from format import price_scrub
 
 from services import crypto
@@ -22,8 +22,7 @@ today = today.strftime("%Y-%m-%d")
 
 
 if __name__ == "__main__":
-    portfolio = sheets.portfolio()
-
+    portfolio = portfolio.portfolio()
     portfolio = iextrading.get_stock_values(portfolio)
 
     stocks = portfolio.value

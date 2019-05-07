@@ -12,7 +12,7 @@ def portfolio():
 
             return Portfolio(positions)
 
-    except IOError:
+    except IOError as err:
         return Portfolio()
 
 def crypto_tokens():
