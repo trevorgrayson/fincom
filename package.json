@@ -1,0 +1,23 @@
+{
+  "name": "math",
+  "version": "0.1.0",
+  "description": "Momentus SDK space planning utilities",
+  "main": "math.js",
+  "scripts": {
+    "compile": "npx webpack",
+    "test": "NODE_PATH=src/js/ mocha --recursive --reporter spec"
+  },
+  "keywords": [
+    "math"
+  ],
+  "author": "trevor grayson <ipsum llc>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "mathjs": "^5.9.0",
+    "mocha": "^6.1.4"
+  },
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
