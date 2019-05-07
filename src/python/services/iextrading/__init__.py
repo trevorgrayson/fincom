@@ -1,7 +1,7 @@
 import requests
 from models import Portfolio, Position
 
-hostname = 'https://api.iextrading.com/1.0'
+HOSTNAME = 'https://api.iextrading.com/1.0'
 
 
 def query_s(params):
@@ -15,7 +15,7 @@ def get_stock_values(portfolio):
         'last': 5
     }
 
-    url = hostname +\
+    url = HOSTNAME +\
     '/stock/market/batch?' +\
     query_s(query)
 

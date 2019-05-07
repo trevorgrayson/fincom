@@ -1,1 +1,1 @@
-python news/wsj.py
+python src/python/news/wsj.py

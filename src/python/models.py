@@ -23,6 +23,10 @@ class Portfolio(object):
             self.positions.values()
         ))
 
+    def __iter__(self):
+        for position in self.positions:
+            yield self.positions[position]
+
 
 class Position(object):
     
@@ -38,12 +42,15 @@ class Position(object):
             self.quantity = float(self.quantity.replace(',', ''))
 
     @property
+    def as_csv(self):
+        return self.symbol + ", " + str(self.value)
+
+    @property
     def value(self):
         return float(self.quantity) * float(self.price)
 
     def __str__(self):
         return "<Position sym={} qty={} price={}>".format(self.symbol, self.quantity, self.price)
-
 
     def __repr__(self):
         return str(self)

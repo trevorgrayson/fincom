@@ -10,6 +10,8 @@ TECH = 'http://www.wsj.com/xml/rss/3_7455.xml'
 
 response = requests.get(WORLD_NEWS)
 
+print response.content
+
 if response.status_code == 200:
     root = etree.parse(BytesIO(response.content))
 
