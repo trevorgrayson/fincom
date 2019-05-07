@@ -20,4 +20,4 @@ DEPENDENCIES
   watir (~> 6.16)
 
 BUNDLED WITH
-   1.17.2
+   2.0.1

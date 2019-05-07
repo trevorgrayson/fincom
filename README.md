@@ -20,8 +20,17 @@ The raw bank asset files can be normalized into portfolio-YYYY-MM-DD.csv
 ```
 
 
-## Add CSVs of assets
+## Portfolio
 
+Your portfolio can be loaded from `portfolio.csv`, or it can be fetched from google sheets.
+The format is as follows.
+
+| Symbol  | | Quantity |
+|---------|-|----------|
+| AAPL    |-|      100 |
+
+
+## Add CSVs of assets 
 * portfolio.csv
 ** Format: "Ticker, Name (optional), Quantity"
 * crypto.csv

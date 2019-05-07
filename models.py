@@ -19,7 +19,7 @@ class Portfolio(object):
 
     @property
     def value(self):
-        return sum(map(lambda pos: pos.quantity * pos.price,
+        return sum(map(lambda pos: pos.value,
             self.positions.values()
         ))
 
@@ -36,3 +36,14 @@ class Position(object):
 
         if isinstance(self.quantity, str):
             self.quantity = float(self.quantity.replace(',', ''))
+
+    @property
+    def value(self):
+        return float(self.quantity) * float(self.price)
+
+    def __str__(self):
+        return "<Position sym={} qty={} price={}>".format(self.symbol, self.quantity, self.price)
+
+
+    def __repr__(self):
+        return str(self)

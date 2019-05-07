@@ -24,7 +24,7 @@ today = today.strftime("%Y-%m-%d")
 if __name__ == "__main__":
     portfolio = sheets.portfolio()
 
-    stocks = iextrading.get_stock_values(portfolio)
+    portfolio = iextrading.get_stock_values(portfolio)
 
     stocks = portfolio.value
 

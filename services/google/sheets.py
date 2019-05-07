@@ -1,6 +1,7 @@
 from __future__ import print_function
 import pickle
 import os.path
+import os
 from models import Portfolio, Position
 
 from googleapiclient.discovery import build
@@ -12,8 +13,12 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 # TODO, change this to config
-SAMPLE_SPREADSHEET_ID = '1EzJTJ7lz3vLlBYPryV76asXmErtqzTkBFoJtlm_F_pU'
-SAMPLE_RANGE_NAME = 'A2:E'
+SPREADSHEET_ID = os.environ['GOOGLE_PORTFOLIO']
+RANGE = 'A2:E'
+
+def scrub(number):
+    return number.replace(',', '')
+
 
 def portfolio():
     creds = None
@@ -39,11 +44,11 @@ def portfolio():
 
     # Call the Sheets API
     sheet = service.spreadsheets()
-    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID,
-                                range=SAMPLE_RANGE_NAME).execute()
+    result = sheet.values().get(spreadsheetId=SPREADSHEET_ID,
+                                range=RANGE).execute()
     values = result.get('values', [])
 
-    positions = [Position(symbol=row[0], quantity=float(row[2])) for row in values]
+    positions = [Position(symbol=row[0], quantity=float(scrub(row[2]))) for row in values if len(row) > 1]
 
     return Portfolio(positions)
 
