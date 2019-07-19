@@ -1,20 +1,25 @@
+PYTHON=python
+DEPDIR=.venv
+export PYTHONPATH=.:$(DEPDIR)
+
 test:
-	py.test
+	$(PYTHON) -m pytest
 
-build:
-	pip install -r requirements.txt
+compile: $(DEPDIR)
+$(DEPDIR): requirements.txt
+	$(PYTHON) -m pip install -t $(DEPDIR) -r requirements.txt
 
-nut:
+nut: compile
 	# make etl
 	# python normalize_download.py
-	python src/python/total.py
+	$(PYTHON) src/python/total.py
 
-etl:
+etl: compile
 	./bin/etl
 
-sheets:
-	python src/python/services/google/sheets.py
+sheets: compile
+	$(PYTHON) src/python/services/google/sheets.py
 
 clean:
 	find . -name "*.pyc" -delete
-
+	rm -rf $(DEPDIR)
