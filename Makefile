@@ -2,9 +2,12 @@ PYTHON=python
 DEPDIR=.venv
 export PYTHONPATH=.:$(DEPDIR)
 
-test:
+test: compile
 	$(PYTHON) -m pytest
 
+integ:
+	echo 'client testing'
+	
 compile: $(DEPDIR)
 $(DEPDIR): requirements.txt
 	$(PYTHON) -m pip install -t $(DEPDIR) -r requirements.txt
@@ -23,3 +26,6 @@ sheets: compile
 clean:
 	find . -name "*.pyc" -delete
 	rm -rf $(DEPDIR)
+
+validate:
+	python -m py_compile `find . -name *.py`

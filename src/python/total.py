@@ -25,6 +25,9 @@ if __name__ == "__main__":
     portfolio = portfolio.portfolio()
     portfolio = iextrading.get_stock_values(portfolio)
 
+    for stock in portfolio:
+        print stock.as_csv
+
     stocks = portfolio.value
 
     tokens = crypto_tokens()
