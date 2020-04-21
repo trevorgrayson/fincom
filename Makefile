@@ -1,9 +1,8 @@
+include Makef.io
+
 PYTHON=python
 DEPDIR=.venv
 export PYTHONPATH=.:$(DEPDIR)
-
-test:
-	$(PYTHON) -m pytest
 
 compile: $(DEPDIR)
 $(DEPDIR): requirements.txt
