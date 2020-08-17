@@ -8,8 +8,7 @@ compile: $(DEPDIR)
 $(DEPDIR): requirements.txt
 	$(PYTHON) -m pip install -t $(DEPDIR) -r requirements.txt
 
-nut: compile
-	# make etl
+nut: compile # etl
 	# python normalize_download.py
 	$(PYTHON) src/python/total.py
 
