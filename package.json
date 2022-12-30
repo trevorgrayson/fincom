@@ -14,7 +14,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "mathjs": "^5.9.0",
-    "mocha": "^6.1.4"
+    "mocha": "^10.2.0"
   },
   "devDependencies": {
     "webpack": "^4.20.2",
